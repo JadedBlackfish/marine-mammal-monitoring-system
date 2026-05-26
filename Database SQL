@@ -1,0 +1,15 @@
+CREATE TABLE sightings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    species VARCHAR(255),
+    location VARCHAR(255),
+    date DATE,
+    notes TEXT,
+    image VARCHAR(255)
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(255),
+    role ENUM('admin','user') DEFAULT 'user'
+);
