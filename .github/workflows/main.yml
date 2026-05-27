@@ -6,13 +6,15 @@ on:
       - main
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Build Docker Image
+      - name: Build Docker Container
         run: docker build -t marine-mammal-app .
